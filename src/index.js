@@ -35,7 +35,7 @@ async function main() {
      * See https://mongodb.github.io/node-mongodb-native/3.3/api/MongoClient.html for more details
      */
      console.log(" 1 -- > init MongoDB client");
-    const client = new MongoClient(uri);
+    const client = new MongoClient(uri, { useNewUrlParser: true , useUnifiedTopology: true});
 
     try {
        console.log(" 3 -- > await connection...");
